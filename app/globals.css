@@ -1,26 +1,123 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* === THEME TOKENS (CSS Variables) === */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* === ROOT THEME === */
+:root {
+  /* Base */
+  --background: #ffffff;
+  --foreground: #111827;
+
+  --hero-bg: url("/hero-background.png");
+
+  /* Surfaces */
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+
+  /* Brand */
+  --primary: #7c3aed;                /* Purple 600 */
+  --primary-foreground: #ffffff;
+  --primary-hover: #6d28d9;          /* Purple 700 */
+
+  /* Brand accents (nombres propios/énfasis) */
+  --brand-purple: #7c3aed;           /* para textos destacados morados */
+  --brand-pink: #ec4899;             /* Pink 500 para "Je Blush" */
+  --brand-pink-hover: #db2777;
+
+  /* Accents suaves */
+  --accent: #fce7f3;                 /* Pink 100 */
+  --accent-foreground: #6b21a8;      /* Purple 800 */
+
+  /* Secondary neutro */
+  --secondary: #faf5ff;              /* Purple 50 */
+  --secondary-foreground: #4c1d95;   /* Purple 900 */
+
+  /* Estados/UI */
+  --destructive: #ef4444;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #c4b5fd;                   /* Purple 300 (ring general) */
+  --ring-soft: #e9d5ff;              /* Purple 200 (anillos suaves) */
+
+  /* Texto atenuado */
+  --muted: #f5f3ff;
+  --muted-foreground: #6b7280;
+
+  /* Gradiente del Hero */
+  --hero-from: #f3e8ff;              /* Purple 100 */
+  --hero-mid:  #ffffff;              /* White */
+  --hero-to:   #fce7f3;              /* Pink 100 */
+
+  /* Blobs decorativos */
+  --blob-pink:   #fecdd3;            /* Rose 200 aprox */
+  --blob-purple: #d8b4fe;            /* Purple 300 */
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* === UTILIDADES SEMÁNTICAS (sin hardcodes de Tailwind por color) === */
+@layer utilities {
+  .bg-hero {
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Textos de marca */
+  .text-brand-purple { color: var(--brand-purple); }
+  .text-brand-pink { color: var(--brand-pink); }
+
+  /* Botones semánticos */
+  .btn-primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  .btn-primary:hover { background: var(--primary-hover); }
+
+  .btn-outline-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: transparent;
+  }
+  .btn-outline-primary:hover {
+    background: var(--accent);
+  }
+
+  /* Anillos/rings semánticos */
+  .ring-soft { box-shadow: 0 0 0 4px var(--ring-soft); }
+
+  /* Gradiente del hero 100% via variables */
+  .bg-hero {
+    background-image: linear-gradient(135deg, var(--hero-from), var(--hero-mid), var(--hero-to));
+  }
+
+  /* Blobs decorativos */
+  .bg-blob-pink { background: var(--blob-pink); }
+  .bg-blob-purple { background: var(--blob-purple); }
 }
