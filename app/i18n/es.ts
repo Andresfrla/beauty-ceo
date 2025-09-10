@@ -13,39 +13,63 @@ const es = {
       buscar: "Buscar",
     },
     auth: { login: "Iniciar Sesión" },
+    actions: {
+      details: "Ver detalles",
+    },
   },
   home: {
     hero: {
-      title: "Convierte tu talento en un negocio rentable",
+      identityTitle:
+        "Soy Jenn Henko, fundadora de Je Blush y creadora de Academia Beauty CEO",
       subtitle:
         "Vende plantillas y cursos, agenda servicios y ofrece una experiencia profesional.",
+      ctaPrimary: "Únete a la Academia",
+      ctaSecondary: "Conoce más",
     },
   },
-  tools: {
-    comboBeautyCeo: {
+  productsTitle: "Herramientas Digitales para Artistas de Belleza",
+  productsSubtitle: "Conviértete en una BEAUTY CEO",
+  products: [
+    {
+      slug: "combo-beauty-ceo",
       title: "COMBO BEAUTY CEO",
       description: "Organiza tu negocio + profesionaliza tu atención al cliente",
+      price: "$85",
+      oldPrice: "$101",
+      img: "/products/combo-beauty-ceo.jpg",
+      badge: "Más vendido",
     },
-    controlNegocios: {
-      title: "Control de Negocios para Artistas de Belleza",
-      description: "Estructura y organiza tu negocio con Notion",
+    {
+      slug: "kit-profesional-artistas",
+      title: "Kit Profesional para Artistas",
+      description:
+        "Plantillas listas para tu marca: contratos, consentimientos y fichas",
+      price: "$49",
+      img: "/products/kit-profesional.jpg",
     },
-    papeleriaProfesional: {
-      title: "Papelería Profesional para PMU, Cejas y Pestañas",
-      description: "Más de 60 plantillas listas para usar y personalizar",
+    {
+      slug: "control-negocio-tracker",
+      title: "Control de Negocio (Tracker)",
+      description: "Agenda, ingresos/gastos y métricas clave en un solo lugar",
+      price: "$39",
+      img: "/products/business-tracker.jpg",
     },
-    agendaDigital: {
-      title: "Agenda Digital para Artistas",
-      description: "Planifica citas y controla tu tiempo con una agenda moderna",
-    },
-    plantillasSocial: {
-      title: "Plantillas para Redes Sociales",
-      description: "Más de 100 diseños editables en Canva listos para tu marca",
-    },
-    brandingPack: {
-      title: "Pack de Branding Profesional",
-      description: "Colores, tipografías y logos para elevar tu imagen",
+  ],
+  services: {
+    hero: {
+      imgAlt: "Resultado de diseño de cejas y pestañas",
+      titlePrefix: "En",
+      titleSuffix: ", transformaré y renovaré tu mirada!",
+      body: {
+        part1: "Realza tu belleza con mis servicios de",
+        bold1: "micropigmentación en cejas y ojos",
+        part2: ", y tratamientos temporales para cejas y pestañas.",
+        bold2: "Resultados naturales, armoniosos",
+        part3: " y diseñados especialmente para ti. ¡Te vas a enamorar!",
+      },
+      cta: "CONOCE TODOS MIS SERVICIOS",
     },
   },
 };
+
 export default es;

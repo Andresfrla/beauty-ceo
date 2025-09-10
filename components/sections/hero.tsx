@@ -1,38 +1,34 @@
-// components/ui/hero.tsx
 "use client";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/app/providers/i18n-provider";
 
 export function Hero() {
+  const { t } = useI18n();
+
   return (
     <section className="relative bg-background">
-      {/* Fondo: UNA sola capa, sin -z-10 */}
+      {/* Background */}
       <div className="absolute inset-0 bg-hero z-0" />
 
-      {/* Contenido por encima del fondo */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 py-16 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Texto */}
+        {/* Text */}
         <div className="space-y-6 text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
-            Soy{" "}
-            <span className="text-brand-purple">Jenn Henko</span>, fundadora de{" "}
-            <span className="text-brand-pink">Je Blush</span> y creadora de{" "}
-            <span className="text-brand-purple">Academia Beauty CEO</span>
+            {t.home.hero.identityTitle}
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-            Con más de 10 años en la industria de belleza, como artista de
-            cejas, pestañas y micropigmentación, ayudo a mujeres a transformarse
-            de <strong>emprendedoras</strong> a{" "}
-            <strong>empresarias</strong> y construir un negocio rentable y
-            exitoso.
+            {t.home.hero.subtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="btn-primary">Únete a la Academia</Button>
+            <Button size="lg" className="btn-primary">
+              {t.home.hero.ctaPrimary}
+            </Button>
             <Button size="lg" variant="outline" className="btn-outline-primary">
-              Conoce más
+              {t.home.hero.ctaSecondary}
             </Button>
           </div>
         </div>

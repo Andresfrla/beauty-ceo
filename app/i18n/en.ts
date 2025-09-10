@@ -13,39 +13,64 @@ const en = {
       buscar: "Search",
     },
     auth: { login: "Sign In" },
+    actions: {
+      details: "View details",
+    },
   },
   home: {
     hero: {
-      title: "Turn your talent into a profitable business",
+      identityTitle:
+        "I’m Jenn Henko, founder of Je Blush and creator of Beauty CEO Academy",
       subtitle:
         "Sell templates and courses, schedule services, and deliver a professional experience.",
+      ctaPrimary: "Join the Academy",
+      ctaSecondary: "Learn more",
     },
   },
-  tools: {
-    comboBeautyCeo: {
+  productsTitle: "Digital Tools for Beauty Artists",
+  productsSubtitle: "Become a BEAUTY CEO",
+  products: [
+    {
+      slug: "combo-beauty-ceo",
       title: "BEAUTY CEO COMBO",
-      description: "Organize your business + professionalize your client service",
+      description:
+        "Organize your business + professionalize your client service",
+      price: "$85",
+      oldPrice: "$101",
+      img: "/products/combo-beauty-ceo.jpg",
+      badge: "Best Seller",
     },
-    controlNegocios: {
-      title: "Business Management for Beauty Artists",
-      description: "Structure and organize your beauty business with Notion",
+    {
+      slug: "kit-profesional-artistas",
+      title: "Professional Kit for Artists",
+      description:
+        "Ready-to-use templates for your brand: contracts, consents, and forms",
+      price: "$49",
+      img: "/products/kit-profesional.jpg",
     },
-    papeleriaProfesional: {
-      title: "Professional Stationery for PMU, Brows and Lashes",
-      description: "Over 60 templates ready to use and customize",
+    {
+      slug: "control-negocio-tracker",
+      title: "Business Control (Tracker)",
+      description: "Manage appointments, income/expenses, and key metrics",
+      price: "$39",
+      img: "/products/business-tracker.jpg",
     },
-    agendaDigital: {
-      title: "Digital Agenda for Artists",
-      description: "Plan appointments and manage your time with a modern agenda",
-    },
-    plantillasSocial: {
-      title: "Social Media Templates",
-      description: "100+ editable Canva designs ready for your brand",
-    },
-    brandingPack: {
-      title: "Professional Branding Pack",
-      description: "Colors, fonts and logos to elevate your image",
+  ],
+  services: {
+    hero: {
+      imgAlt: "Brow and lashes result",
+      titlePrefix: "At",
+      titleSuffix: ", I’ll transform and renew your look!",
+      body: {
+        part1: "Enhance your beauty with my",
+        bold1: "micropigmentation for brows and eyes",
+        part2: ", plus temporary treatments for brows and lashes.",
+        bold2: "Natural, harmonious results",
+        part3: " designed especially for you. You’ll fall in love!",
+      },
+      cta: "SEE ALL MY SERVICES",
     },
   },
 };
+
 export default en;
