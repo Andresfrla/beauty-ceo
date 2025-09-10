@@ -70,6 +70,29 @@ const es = {
       cta: "CONOCE TODOS MIS SERVICIOS",
     },
   },
+  testimonials: {
+    title: "Testimonios de nuestros clientes",
+    items: [
+      {
+        quote:
+          "El curso con Jenn fue increíble, me ayudó a estructurar mi negocio de Cejas y gracias a eso he tenido más orden en mi negocio!",
+        name: "Miranda Suárez",
+        rating: 5
+      },
+      {
+        quote:
+          "Gracias a mi Control de Negocios, tengo todo organizado, sin duda, valió la pena.",
+        name: "Rocío Gonzales",
+        rating: 4.5
+      },
+      {
+        quote:
+          "Soy clienta de Jenn desde hace 7 años, me encanta cómo trabaja, ¡sus resultados son muy naturales!",
+        name: "Marina López",
+        rating: 4.7
+      },
+    ],
+  },
 };
 
 export default es;

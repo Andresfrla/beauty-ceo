@@ -71,6 +71,26 @@ const en = {
       cta: "SEE ALL MY SERVICES",
     },
   },
+  testimonials: {
+    title: "What our clients say",
+    items: [
+      {
+        quote:
+          "Jenn’s course was incredible; it helped me structure my brow business and now everything is much more organized!",
+        name: "Miranda Suarez",
+      },
+      {
+        quote:
+          "With my Business Control tracker I keep everything organized — totally worth it.",
+        name: "Rocio Gonzales",
+      },
+      {
+        quote:
+          "I’ve been Jenn’s client for 7 years. I love her work — results are so natural!",
+        name: "Marina Lopez",
+      },
+    ],
+  },
 };
 
 export default en;
